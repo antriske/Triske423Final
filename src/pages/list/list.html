@@ -1,0 +1,40 @@
+<!--
+  Generated template for the ListPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Santa's Gift Request List</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="addItem()">
+        <ion-icon icon-only name="add"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <ion-item-sliding *ngFor="let gift of gifts">
+      <ion-item>
+        {{gift.item}}
+      </ion-item>
+
+      <ion-item-options>
+        <button ion-button icon-only color="light" (click)="editItem(gift)">
+          <ion-icon name="paper"></ion-icon>
+        </button>
+        <button ion-button icon-only color="danger" (click)="deleteItem(gift)">
+          <ion-icon name="trash"></ion-icon>
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+
+  </ion-list>
+
+</ion-content>

@@ -1,14 +1,28 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      NAUGHTY OR NICE
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+
+  <ion-card>
+  <p class="firstLine">It's that simple. Are you naughty or nice?</p>
+
+    <img class="santa" src="assets/imgs/santa.jpg"/>
+
+    <p class="select">
+      SELECT WHICH U IS:
+    </p>
+
+
+    <!--these button allow you to leave the homepage and enter the page with the LIST or ERR-->
+    <div class="homeBtns">
+      <button ion-button color="danger" (click)="gotoErr()">n A u G h T y</button>
+      <button ion-button color="secondary" (click)="gotoList()">n i C e</button>
+    </div>
+  </ion-card>
+
 </ion-content>
